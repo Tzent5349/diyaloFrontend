@@ -1,26 +1,64 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@layer components{
+    .activeLink{
+        @apply text-act
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+    font-family: "moon";
+    src: url("../public/assets/fonts/moon_get-Heavy.ttf");
 }
 
-* {
-  box-sizing: border-box;
+.hero{
+
+    position: relative;
+    animation: slideLeft 1s 1;
+    animation-timing-function: ease;
+}
+.dropDown{
+    position: relative;
+    animation: dropDown 1s ease 1s 1 normal none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes slideLeft {
+    from{left:-200px;}
+    to{left: 0px;}
+}
+
+@keyframes dropDown {
+    from{top:-250px;}
+    to {bottom: 0px;}
+}
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
-  body {
-    color: white;
-    background: black;
+
+  @layer components{
+    input{
+        @apply border border-primary rounded py-3 px-4 outline-none w-full bg-basee placeholder:text-primary placeholder:font-semibold
+    }
+
+    textarea{
+        @apply border border-primary rounded h-20 py-3 px-4 outline-none w-full bg-basee placeholder:text-lg placeholder:text-primary placeholder:font-semibold
+    }
   }
+
+.example::-webkit-scrollbar {
+    display: none;
 }
+
+
+.example {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; }

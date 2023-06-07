@@ -1,0 +1,10 @@
+export {default as Navbar} from "./Navbar";
+export {default as Carousel} from "./Carousel";
+export {default as Footer} from "./Footer";
+export {default as Banner} from "./Banner";
+export {default as Specality} from "./Specality";
+export {default as Offers} from "./Offers";
+export {default as Deliveries} from "./Deliveries";
+export {default as Reviews} from "./Reviews";
+export {default as Strength} from "./Strength";
+export {default as Reservation} from "./Reservation";
